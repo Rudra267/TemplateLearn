@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Academy Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider-container {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            width: 100%;
+            overflow: hidden;
+            padding: 4rem 0;
+            background: linear-gradient(to right,#543cdfef,#F4F6F5);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: #a7f3d0;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .slider-row {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 2rem;
+        }
+
+        .slider-track {
+            display: flex;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            min-width: 200%;
+        }
+
+        .slider-track.left {
+            animation: scroll-left 20s linear infinite;
+        }
+
+        .slider-track.right {
+            animation: scroll-right 25s linear infinite;
+        }
+
+        .academy-card {
+            flex-shrink: 0;
+            margin: 0 1rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f3f4f6;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .academy-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .academy-logo {
+            font-size: 1.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .academy-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            text-align: center;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="header">
+            <h2>The most prestigious academies</h2>
+            <p>Our courses are partnered with top universities for globally recognized certifications</p>
+        </div>
+        
+        <!-- First row - moving right to left -->
+        <div class="slider-row">
+            <div class="slider-track left">
+                <!-- First set -->
+                <div class="academy-card">
+                    <div class="academy-logo">🏢</div>
+                    <div class="academy-name">School of Business</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🔥</div>
+                    <div class="academy-name">Firebird University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎓</div>
+                    <div class="academy-name">ISBR Business School</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🏛️</div>
+                    <div class="academy-name">JECRC University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📚</div>
+                    <div class="academy-name">KU University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎯</div>
+                    <div class="academy-name">IIMA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">⭐</div>
+                    <div class="academy-name">XLRI</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💼</div>
+                    <div class="academy-name">ISB</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🌟</div>
+                    <div class="academy-name">JIM</div>
+                </div>
+                
+                <!-- Duplicate set for seamless loop -->
+                <div class="academy-card">
+                    <div class="academy-logo">🏢</div>
+                    <div class="academy-name">School of Business</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🔥</div>
+                    <div class="academy-name">Firebird University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎓</div>
+                    <div class="academy-name">ISBR Business School</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🏛️</div>
+                    <div class="academy-name">JECRC University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📚</div>
+                    <div class="academy-name">KU University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎯</div>
+                    <div class="academy-name">IIMA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">⭐</div>
+                    <div class="academy-name">XLRI</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💼</div>
+                    <div class="academy-name">ISB</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🌟</div>
+                    <div class="academy-name">JIM</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second row - moving left to right -->
+        <div class="slider-row">
+            <div class="slider-track right">
+                <!-- First set -->
+                <div class="academy-card">
+                    <div class="academy-logo">🎓</div>
+                    <div class="academy-name">Oxford Management</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🚀</div>
+                    <div class="academy-name">NSDC</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📊</div>
+                    <div class="academy-name">Google Analytics</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📈</div>
+                    <div class="academy-name">ACCA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💰</div>
+                    <div class="academy-name">AICPA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🏫</div>
+                    <div class="academy-name">Presidency University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🔬</div>
+                    <div class="academy-name">RV University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💡</div>
+                    <div class="academy-name">SOIBM</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎖️</div>
+                    <div class="academy-name">IIMB</div>
+                </div>
+                
+                <!-- Duplicate set for seamless loop -->
+                <div class="academy-card">
+                    <div class="academy-logo">🎓</div>
+                    <div class="academy-name">Oxford Management</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🚀</div>
+                    <div class="academy-name">NSDC</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📊</div>
+                    <div class="academy-name">Google Analytics</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">📈</div>
+                    <div class="academy-name">ACCA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💰</div>
+                    <div class="academy-name">AICPA</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🏫</div>
+                    <div class="academy-name">Presidency University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🔬</div>
+                    <div class="academy-name">RV University</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">💡</div>
+                    <div class="academy-name">SOIBM</div>
+                </div>
+                <div class="academy-card">
+                    <div class="academy-logo">🎖️</div>
+                    <div class="academy-name">IIMB</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
