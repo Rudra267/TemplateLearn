@@ -14195,6 +14195,7 @@ xclip
   }
 }
 .header-top-one-wrapper .header-top-one {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
